@@ -1,7 +1,8 @@
 package com.example.tourservice;
 
-import com.example.tourservice.utilities.TourRepository;
 import org.springframework.stereotype.Service;
+
+import com.example.tourservice.utilities.TourRepository;
 
 @Service
 public class TravelAgentService {
@@ -10,7 +11,6 @@ public class TravelAgentService {
     public TravelAgentService(TourRepository tourRepository) {
         this.tourRepository = tourRepository;
     }
-
     public void displayTours() {
         tourRepository.findAll().stream().forEach(System.out::println);
     }
